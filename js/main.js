@@ -37,4 +37,5 @@ modalOverlay.addEventListener('click', function(e){
     if(!e.target.closest('.modal')){
       bod.classList.remove('modal-is-open')
     }
+    console.log(e.target)
 })
