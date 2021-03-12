@@ -20,10 +20,10 @@
 
 // })
 
-const modalBtn = document.querySelector('.jsModalBtn')
+const modalBtn = document.querySelector('.jsModalButton')
 const modalCloseBtn = document.querySelector('.jsModalClose')
 const bod = document.body
-const modalOverlay = document.querySelector('.jsModalOverLay')
+const modalOverlay = document.querySelector('.jsModalOverlay')
 
 modalBtn.addEventListener('click', function(e){
   bod.classList.add('modal-is-open')
@@ -39,3 +39,4 @@ modalOverlay.addEventListener('click', function(e){
     }
     console.log(e.target)
 })
+
