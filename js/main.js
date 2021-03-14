@@ -27,6 +27,7 @@ const modalOverlay = document.querySelector('.jsModalOverlay')
 
 modalBtn.addEventListener('click', function(e){
   bod.classList.add('modal-is-open')
+  wave()
 })
 
 modalCloseBtn.addEventListener('click', function(e){
@@ -39,4 +40,32 @@ modalOverlay.addEventListener('click', function(e){
     }
     console.log(e.target)
 })
+
+const wavingHand = document.querySelector('.wave-hand')
+
+const wave = ()=>{
+  const tl = new TimelineMax({})
+  tl.set(wavingHand, {transformOrigin: 'bottom center'})
+  tl.from(wavingHand, .5, {
+    scale: .25,
+    opacity: 0,
+    ease: Back.easeOut.config(1.5)
+  })
+  tl.to(wavingHand, .2, {
+    rotation: 15
+  })
+  tl.to(wavingHand, .2, {
+    rotation: -15
+  })
+  tl.to(wavingHand, .2, {
+    rotation: 15
+  })
+  tl.to(wavingHand, .2, {
+    rotation: -15
+  })
+  tl.to(wavingHand, .2, {
+    rotation: 0
+  })
+
+}
 
